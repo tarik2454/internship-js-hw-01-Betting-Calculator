@@ -1,1 +1,1 @@
-# internship-js-hw-01
+# internship-js-hw-01-Betting-Calculator
