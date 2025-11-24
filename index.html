@@ -1,79 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/favicon-96.png" sizes="96x96" />
     <title>Betting Calculator</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="images/favicon-32.png"
-      sizes="32x32"
-    />
-    <link rel="apple-touch-icon" href="images/favicon-96.png" sizes="96x96" />
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="card">
-      <h1>Betting Calculator</h1>
-      <p class="lead">
-        Введи сумму ставки, коефіцієнт і тип гри. Розрахунок в реальному часі.
-      </p>
-
-      <div class="grid">
-        <section>
-          <form id="betForm" novalidate>
-            <label for="amount">Сума ставки (UAH)</label>
-            <input
-              id="amount"
-              type="number"
-              step="0.01"
-              min="0"
-              placeholder="Наприклад, 100"
-              required
-            />
-
-            <label for="odds">Коефіцієнт</label>
-            <input
-              id="odds"
-              type="number"
-              step="0.01"
-              min="0.01"
-              placeholder="Наприклад, 1.75"
-              required
-            />
-
-            <label for="game">Тип гри</label>
-            <select id="game">
-              <option value="slots">Слоти</option>
-              <option value="poker">Покер</option>
-              <option value="football">Футбол</option>
-              <option value="casino">Казино</option>
-              <option value="other">Інше</option>
-            </select>
-
-            <div class="row">
-              <button id="calcBtn" type="button">Розрахувати</button>
-              <button id="saveBtn" type="button">Зберегти ставку</button>
-            </div>
-
-            <div class="errors" id="errors"></div>
-          </form>
-        </section>
-
-        <aside>
-          <div class="result">
-            <div>Потенційний виграш:</div>
-            <div class="big" id="potential">—</div>
-            <div class="muted" id="details">Сума × Коефіцієнт</div>
-          </div>
-
-          <h3 class="history-title">Історія останніх 5 ставок</h3>
-          <div class="history" id="historyList"></div>
-        </aside>
-      </div>
-    </main>
-
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
