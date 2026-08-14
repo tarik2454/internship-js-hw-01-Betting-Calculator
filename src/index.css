@@ -1,4 +1,9 @@
 :root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   --bg: #f6f7fb;
   --card: #fff;
   --accent: #2b6cb0;
@@ -12,22 +17,28 @@
 }
 
 body {
+  line-height: 1.5;
+  font-weight: 400;
+
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 24px;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-    url("images/bg-image.webp");
+    url("/bg-image.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.card-wrapper {
+  padding: 0 12px;
+}
+
 .card {
   width: 100%;
-  max-width: 760px;
+  max-width: 678px;
   background: var(--card);
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(20, 20, 40, 0.08);
@@ -48,7 +59,7 @@ h1 {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 1.3fr 1fr;
   gap: 18px;
 }
 
